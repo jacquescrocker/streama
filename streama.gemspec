@@ -47,6 +47,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{Streama is a simple activity stream gem for use with the Mongoid ODM framework.}
+
   s.test_files = [
     "spec/lib/activity_spec.rb",
     "spec/lib/actor_spec.rb",
@@ -59,34 +60,12 @@ Gem::Specification.new do |s|
     "spec/support/models/user.rb"
   ]
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
-      s.add_runtime_dependency(%q<mongoid>, ["~> 2.0.0.rc"])
-      s.add_runtime_dependency(%q<bson_ext>, ["~> 1.2"])
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
-    else
-      s.add_dependency(%q<activesupport>, ["~> 3.0"])
-      s.add_dependency(%q<mongoid>, ["~> 2.0.0.rc"])
-      s.add_dependency(%q<bson_ext>, ["~> 1.2"])
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-      s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_dependency(%q<rcov>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<activesupport>, ["~> 3.0"])
-    s.add_dependency(%q<mongoid>, ["~> 2.0.0.rc"])
-    s.add_dependency(%q<bson_ext>, ["~> 1.2"])
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
-    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-    s.add_dependency(%q<rcov>, [">= 0"])
-  end
+  s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
+  s.add_runtime_dependency(%q<mongoid>, ["~> 2.0"])
+  s.add_runtime_dependency(%q<bson_ext>, ["~> 1.2"])
+  s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
+  s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+  s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+  s.add_development_dependency(%q<rcov>, [">= 0"])
 end
 
